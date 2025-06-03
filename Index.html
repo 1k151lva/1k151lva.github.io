@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ikki Silva | Portfólio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #f0f0f0;
+      line-height: 1.6;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+    a {
+      color: #00ffee;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #ffcc00;
+    }
+    header {
+      text-align: center;
+      padding: 40px 0;
+      animation: fadeIn 1.2s ease-out forwards;
+      opacity: 0;
+    }
+    header img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+      border: 4px solid #00ffff;
+      transition: transform 0.5s;
+    }
+    header img:hover {
+      transform: scale(1.05);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #00ffff;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #bbb;
+    }
+    section {
+      max-width: 900px;
+      margin: 0 auto 40px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+      backdrop-filter: blur(8px);
+      transform: translateY(40px);
+      opacity: 0;
+      transition: all 0.8s ease;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #00ffff;
+      padding-bottom: 10px;
+    }
+    .project {
+      margin-bottom: 20px;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+    }
+    .project h3 {
+      font-size: 1.3rem;
+      color: #00ffff;
+    }
+    .project a {
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-top: 60px;
+      animation: fadeIn 1.2s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Imagem do WhatsApp de 2025-06-03 à(s) 12.10.21_07f3cc87.jpg" alt="Foto de Ikki Silva">
+    <h1>Ikki Silva</h1>
+    <p>Desenvolvedor Front-End | HTML, CSS, JavaScript, Vue.js, React</p>
+  </header>
+
+  <section class="reveal">
+    <h2>Sobre Mim</h2>
+    <p>Sou estudante de Engenharia de Software pela UEPA, com foco em desenvolvimento front-end. Tenho experiência com HTML, CSS, JavaScript e frameworks modernos como Vue.js e React. Busco uma oportunidade de estágio para aplicar meus conhecimentos em projetos reais.</p>
+  </section>
+
+  <section class="reveal">
+    <h2>Projetos</h2>
+    <div class="project">
+      <h3>Site de Apresentação com Vue.js</h3>
+      <p>Projeto desenvolvido com Vue.js para apresentar perfil profissional e praticar componentização e responsividade.</p>
+      <a href="https://github.com/gustavosnow/projetoPW" target="_blank">Ver no GitHub</a>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <h2>Contato</h2>
+    <p>Email: <a href="mailto:ikkisilvacarvalho3@gmail.com">ikkisilvacarvalho3@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/ikki-silva-carvalho-0639a4323" target="_blank">ikki-silva-carvalho</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ikki Silva. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    sections.forEach(section => {
+      revealObserver.observe(section);
+    });
+
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
+    setTimeout(() => {
+      header.style.opacity = 1;
+      footer.style.opacity = 1;
+    }, 300);
+  </script>
+</body>
+</html>
