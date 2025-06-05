@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self'; /* Permite carregar tudo do próprio domínio por padrão */
+    script-src 'self' https://cdnjs.cloudflare.com; /* Permite scripts do próprio domínio e do CDN do FontAwesome */
+    style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com 'unsafe-inline'; /* Permite estilos do próprio domínio, CDN do FontAwesome, Google Fonts e estilos inline (se necessário) */
+    font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; /* Permite fontes do próprio domínio, CDN do FontAwesome e Google Fonts */
+    img-src 'self' data:; /* Permite imagens do próprio domínio e data URIs (ex: imagens embutidas) */
+    connect-src 'self'; /* Restringe conexões (XHR, WebSockets, EventSource) ao próprio domínio. Se você usar um serviço de formulário de terceiros, adicione o domínio dele aqui */
+    form-action 'self'; /* Permite que formulários enviem dados apenas para o próprio domínio. Se usar um serviço externo (Formspree, Netlify Forms), adicione o endpoint aqui. */
+    frame-ancestors 'none'; /* Impede que seu site seja embutido em iframes em outros sites, prevenindo clickjacking. */
+    base-uri 'self';
+    object-src 'none'; /* Desabilita plugins como Flash */
+">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfólio de Ikki Silva Carvalho, desenvolvedor front-end especializado em HTML, CSS, JavaScript, React e Vue.js.">
+    <meta name="referrer" content="no-referrer-when-downgrade">
     <meta name="keywords" content="Desenvolvedor Front-End, HTML, CSS, JavaScript, React, Vue, Ikki Silva Carvalho, Portfólio">
     <meta property="og:title" content="Ikki Silva Carvalho - Desenvolvedor Front-End">
     <meta property="og:description" content="Confira o portfólio de Ikki Silva Carvalho, um desenvolvedor front-end apaixonado por criar interfaces web interativas e responsivas.">
     <meta property="og:image" content="images/imagem_perfil.jpg"> <meta property="og:url" content="URL_DO_SEU_SITE_ONLINE">
     <meta property="og:type" content="website">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:;">
     <title>Ikki Silva Carvalho - Desenvolvedor Front-End</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" integrity="SHA_VALOR_DO_HASH_AQUI" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="SHA_VALOR_DO_HASH_AQUI" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" integrity="SHA_VALOR_DO_HASH_AQUI" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin integrity="SHA_VALOR_DO_HASH_AQUI" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" integrity="SHA_VALOR_DO_HASH_AQUI" crossorigin="anonymous">
 </head>
 <body>
 
