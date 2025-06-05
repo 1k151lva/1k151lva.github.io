@@ -366,7 +366,7 @@ img {
     flex-basis: 40%;
 }
 
-.contato-info h3 { /* Se for adicionar título para essa parte */
+.contato-info h3 {
     color: var(--cor-secundaria);
     margin-bottom: 20px;
 }
@@ -462,7 +462,7 @@ img {
 
 .certificado img {
     width: 100%;
-    max-height: 200px; /* Ajuste conforme necessário */
+    max-height: 200px;
     object-fit: contain;
     border: 1px solid #eee;
     border-radius: var(--border-radius-padrao);

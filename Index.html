@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Ikki Silva Carvalho, desenvolvedor front-end especializado em HTML, CSS, JavaScript, React e Vue.js.">
+    <meta name="keywords" content="Desenvolvedor Front-End, HTML, CSS, JavaScript, React, Vue, Ikki Silva Carvalho, Portfólio">
+    <meta property="og:title" content="Ikki Silva Carvalho - Desenvolvedor Front-End">
+    <meta property="og:description" content="Confira o portfólio de Ikki Silva Carvalho, um desenvolvedor front-end apaixonado por criar interfaces web interativas e responsivas.">
+    <meta property="og:image" content="images/imagem_perfil.jpg"> <meta property="og:url" content="URL_DO_SEU_SITE_ONLINE">
+    <meta property="og:type" content="website">
     <title>Ikki Silva Carvalho - Desenvolvedor Front-End</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -57,7 +63,7 @@
                         <div class="projeto-info">
                             <h3>Projeto Apresentação</h3>
                             <p>O Projeto-Apresentacao-Vue.js é um projeto desenvolvido utilizando o framework Vue.js, voltado para a criação de interfaces web interativas e dinâmicas. Ele serve como uma apresentação ou demonstração das funcionalidades e recursos do Vue.js, facilitando o aprendizado e a experimentação com componentes, diretivas e o fluxo de dados reativo proporcionado pelo framework. O projeto pode ser utilizado como base para estudos ou para implementar novas funcionalidades utilizando as melhores práticas do Vue.js.</p>
-                            <a href="https://github.com/gustavosnow/Projeto-Apresentacao-Vue.js.git" target="_blank" class="btn btn-secondary"><i class="fab fa-github"></i> Ver no GitHub</a>
+                            <a href="https://github.com/gustavosnow/Projeto-Apresentacao-Vue.js.git" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-github"></i> Ver no GitHub</a>
                             </div>
                     </div>
                 </div>
@@ -74,7 +80,6 @@
                             <li><i class="fab fa-html5"></i> HTML5</li>
                             <li><i class="fab fa-css3-alt"></i> CSS3 (Flexbox, Grid, Animações)</li>
                             <li><i class="fab fa-js-square"></i> JavaScript (ES6+)</li>
-                            <li><i class="fab fa-react"></i> React</li>
                             <li><i class="fab fa-vuejs"></i> Vue.js</li>
                         </ul>
                     </div>
@@ -110,10 +115,25 @@
                         <p>Estou sempre aberto a novas oportunidades, projetos e colaborações. Sinta-se à vontade para entrar em contato!</p>
                         <ul>
                             <li><i class="fas fa-envelope"></i> <a href="mailto:ikkisilvacarvalho3@gmail.com">ikkisilvacarvalho3@gmail.com</a></li>
-                            <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/ikki-silva-carvalho-0639a4323" target="_blank">LinkedIn</a></li>
-                            <li><i class="fab fa-github"></i> <a href="https://github.com/1k151lva" target="_blank">GitHub</a></li>
+                            <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/ikki-silva-carvalho-0639a4323" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                            <li><i class="fab fa-github"></i> <a href="https://github.com/1k151lva" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                             </ul>
                     </div>
+                    <div class="contato-form">
+                        <form id="contact-form"> <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensagem">Mensagem</label>
+                                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                        </form>
                 </div>
             </div>
         </section>

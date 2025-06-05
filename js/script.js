@@ -109,7 +109,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // === VALIDAÇÃO SIMPLES DO FORMULÁRIO DE CONTATO (CLIENT-SIDE) ===
-    // Para um funcionamento real, você precisará de um backend ou serviço de formulário.
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
@@ -144,9 +143,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 event.preventDefault(); // Impede o envio do formulário
                 alert('Por favor, corrija os seguintes erros:\n\n' + errorMessage);
             } else {
-                // Aqui você pode adicionar uma mensagem de "Enviando..." ou desabilitar o botão
-                // Exemplo: alert('Formulário enviado com sucesso! (Simulação)');
-                // event.preventDefault(); // Descomente se estiver testando e não quiser que a página recarregue
+                alert('Formulário enviado com sucesso! (Simulação)');
+                event.preventDefault();
             }
         });
     }
