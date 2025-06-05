@@ -248,6 +248,7 @@ img {
 
 .sobre-texto {
     flex-grow: 1;
+    text-align: justify;
 }
 
 .sobre-texto .btn {
